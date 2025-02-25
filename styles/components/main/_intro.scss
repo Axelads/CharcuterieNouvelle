@@ -1,0 +1,72 @@
+.intro {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 1950px;
+    height: 500px;
+    background: url("/images/design/background_intro.png") no-repeat center center;
+    background-size: cover;
+    padding: 80px 0; // Ajoute un espace pour éviter de coller au bord
+  
+    .intro-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      max-width: 1200px;
+    }
+  
+    .hero-content {
+        margin-top: 150px;
+      width: 45%;
+      text-align: left;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start; // Texte aligné à gauche
+      
+  
+      h1 {
+        font-size: 2.5rem;
+        margin-bottom: 10px;
+        text-shadow: 
+            -1px -1px 0 white,  
+            1px -1px 0 white,  
+            -1px 1px 0 white,  
+            1px 1px 0 white; // Effet de contour blanc
+      }
+  
+      p {
+        font-size: 1.2rem;
+        margin-bottom: 20px;
+      }
+      .provence-info {
+        display: flex;
+        align-items: center;
+        gap: 10px; // Espacement entre le texte et l’image
+        font-size: 1.2rem;
+        font-weight: bold;
+      }
+      
+      .provence-img {
+        width: 50px;
+        height: 50px;
+        object-fit: contain; // Garde l’image propre sans la déformer
+      }
+  
+      .btn {
+        display: inline-block;
+        padding: 12px 24px;
+        background: #ff41a0;
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+        border-radius: 15px;
+        transition: background 0.3s;
+  
+        &:hover {
+          background: #cc3434;
+        }
+      }
+    }
+  }
+  

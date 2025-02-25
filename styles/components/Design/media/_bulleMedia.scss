@@ -1,0 +1,60 @@
+.media {
+    list-style-type: none;
+    position: fixed;
+    top: 40%;
+    right: 2%;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 1000;
+}
+
+.bulle {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    position: relative;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; // ✅ Animation fluide
+
+    &:hover {
+        transform: scale(1.2) !important; // ✅ Force l'application du scale
+        box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3); // ✅ Ajout d'une ombre pour renforcer l'effet
+    }
+
+    img {
+        width: 40px;
+        height: 40px;
+        transition: none; // ✅ Supprime toute animation sur l'image pour éviter les conflits
+    }
+}
+
+/* ✅ Media Query pour les écrans ≤ 562px */
+@media screen and (max-width: 562px) {
+    .media {
+        top: 50%;
+
+        .bulle {
+            width: 45px;
+            height: 45px;
+
+            img {
+                width: 30px;
+                height: 30px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .media {
+        top: 60%;
+    }
+}

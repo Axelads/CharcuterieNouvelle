@@ -1,0 +1,47 @@
+.loading-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, black, #3a3a3a);
+    color: white;
+    z-index: 1000;
+    opacity: 1;
+    transition: opacity 2s ease-out; // Transition plus fluide pour éviter un changement brusque
+
+    .loading-title {
+        opacity: 0;
+        font-size: 3rem;
+        margin-bottom: 20px;
+        font-family: "Petit Formal Script", cursive;
+        color: black;
+        font-weight: 400;
+        font-style: italic;
+        text-align: center;
+
+        text-shadow: 
+            -1px -1px 0 white,  
+            1px -1px 0 white,  
+            -1px 1px 0 white,  
+            1px 1px 0 white; // Contour blanc plus fin et plus naturel
+    }
+
+    .loading-images {
+        display: flex;
+        gap: 25px;
+
+        img {
+            opacity: 0;
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 10px;
+            transition: transform 0.3s ease-out; // Ajoute un léger effet de zoom fluide
+        }
+    }
+}

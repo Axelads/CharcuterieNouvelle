@@ -1,0 +1,78 @@
+.admin-login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: url("/images/design/background_admin.webp") no-repeat center center;
+    background-size: cover;
+    color: white;
+    text-align: center;
+  
+    h1 {
+        font-family: var(--font-press-start), sans-serif;
+        font-size: 1.5rem; // Ajuste la taille selon tes besoins
+        font-weight: 400;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        text-shadow: 3px 3px 0px rgba(0, 0, 0, 0.3);
+        animation: fadeIn 1.5s ease-in-out; // Animation d'apparition
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        background: rgba(255, 255, 255, 0.1);
+        padding: 25px;
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        width: 300px;
+        opacity: 0; // Pour l'animation GSAP
+
+        input {
+            padding: 12px;
+            font-size: 1rem;
+            border: none;
+            border-radius: 5px;
+            outline: none;
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            transition: all 0.3s ease;
+
+            &::placeholder {
+                color: rgba(255, 255, 255, 0.7);
+            }
+
+            &:focus {
+                background: rgba(255, 255, 255, 0.3);
+                transform: scale(1.05); // Effet de zoom progressif au focus
+            }
+        }
+
+        button {
+            padding: 12px;
+            font-size: 1rem;
+            font-weight: bold;
+            border: none;
+            border-radius: 5px;
+            background: #ff41a0;
+            color: white;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+
+            &:hover {
+                background: #cc347f;
+                transform: translateY(-2px); // Effet de glissement léger au hover
+            }
+        }
+    }
+
+    .error {
+        color: #ff4141;
+        margin-top: 10px;
+        font-weight: bold;
+    }
+}

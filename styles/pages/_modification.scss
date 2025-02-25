@@ -1,0 +1,56 @@
+.admin-dashboard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: url("/images/design/background_admin.webp") no-repeat center center;
+    background-size: cover;
+    color: white;
+    text-align: center;
+    padding: 40px;
+
+    h1 {
+        font-family: var(--font-press-start), sans-serif;
+        font-size: 1.8rem;
+        font-weight: 400;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        text-shadow: 3px 3px 0px rgba(0, 0, 0, 0.3);
+        opacity: 0; // Pour animation GSAP
+    }
+
+    p {
+        font-size: 1.2rem;
+        margin-bottom: 20px;
+        opacity: 0; // Animation GSAP
+    }
+
+    .admin-actions {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        width: 300px;
+        margin-top: 20px;
+        opacity: 0; // Animation GSAP
+
+        button {
+            padding: 12px;
+            font-size: 1rem;
+            font-weight: bold;
+            border: none;
+            border-radius: 8px;
+            background: #ff41a0;
+            color: white;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+
+            &:hover {
+                background: #cc347f;
+                transform: scale(1.05);
+            }
+        }
+    }
+}

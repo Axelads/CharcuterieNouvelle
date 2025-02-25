@@ -1,0 +1,36 @@
+
+.carousel-wrapper {
+    margin-top: 100px;
+
+  .carousel-container {
+    position: relative;
+    margin-top: 260px;
+    width: 650px;
+    height: 500px;
+    margin: 0 auto;
+    overflow: hidden;
+  
+    .swiper {
+      width: 100%;
+      height: 100%;
+    }
+  
+    .swiper-slide {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  
+    .carousel-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover; // Ajuste l'image pour qu'elle remplisse le carousel sans être déformée
+      border-radius: 10px;
+    }
+  
+    .swiper-pagination {
+      bottom: 10px !important;
+    }
+  }
+}
+  

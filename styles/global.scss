@@ -1,0 +1,37 @@
+// Style Layout
+@use "Layout/footer";
+@use "Layout/header";
+
+// styles pages 
+@use "pages/home";
+@use "pages/pbAdmin";
+@use "pages/modification";
+@use "pages/produits";
+@use "pages/adminProduits";
+@use "pages/adminArticles";
+
+// Page d'intro
+@use "components/Loading/loading";
+
+// Style des composents du main
+@use "components/main/intro";
+@use "components/main/resumeAbout";
+@use "components/main/articles";
+
+// style carousel
+@use "components/carousel/carousel";
+
+// style cards
+@use "components/Saison/seasonalProducts";
+
+// style design
+@use "components/Design/media/bulleMedia";
+
+
+body {
+    font-family: sans-serif;
+    background: #f8f8f8;
+    color: #222;
+    margin: 0;
+    padding: 0;
+  }

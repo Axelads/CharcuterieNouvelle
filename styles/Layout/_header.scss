@@ -1,0 +1,139 @@
+.header {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 70%;
+    background: black;
+    color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    border-radius: 0 0 50px 50px; // Arrondir légèrement le bas du header
+    .search-container {
+        position: relative;
+        display: flex;
+        align-items: center;
+        transition: width 0.3s ease;
+        overflow: hidden;
+        width: 0;
+      
+        form {
+          display: flex;
+          align-items: center;
+          background: white;
+          border-radius: 5px;
+          padding: 5px;
+          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+      
+          input {
+            border: none;
+            outline: none;
+            padding: 8px;
+            width: 150px;
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+          }
+      
+          button {
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            font-size: 18px;
+            color: black;
+            padding: 5px;
+          }
+        }
+      
+        &.open {
+          width: 200px; // Largeur de la barre ouverte
+      
+          form {
+            input {
+              opacity: 1;
+            }
+          }
+        }
+      }
+      
+      .search-toggle {
+        background: none;
+        border: none;
+        cursor: pointer;
+        font-size: 20px;
+        color: white;
+        margin-left: 15px;
+      
+        &:hover {
+          color: #f821a5d7;
+        }
+      }
+      
+
+    .header-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 15px 20px;
+
+        .logo img {
+            height: 60px;
+        }
+
+        .nav-menu {
+            ul {
+                display: flex;
+                gap: 20px;
+                list-style: none;
+
+                li {
+                    a {
+                        text-decoration: none;
+                        color: white;
+                        font-weight: bold;
+                        transition: color 0.3s;
+
+                        &:hover {
+                            color: #f821a5d7;
+                        }
+                    }
+                }
+            }
+
+            &.open {
+                display: block;
+            }
+        }
+
+        .menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 24px;
+            cursor: pointer;
+
+            @media (max-width: 768px) {
+                display: block;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-menu {
+                display: none;
+                position: absolute;
+                top: 60px;
+                right: 20px;
+                background: white;
+                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+                padding: 15px;
+                border-radius: 5px;
+
+                ul {
+                    flex-direction: column;
+                    gap: 10px;
+                }
+            }
+        }
+    }
+}
